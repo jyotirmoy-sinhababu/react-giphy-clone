@@ -1,12 +1,14 @@
 import React from 'react';
 
+import './navStyle.css';
+
 import Logo from '../logo/Logo';
 import { MdAccountBox } from 'react-icons/md';
 
 const Nav = () => {
   return (
-    <div>
-      <div>
+    <div className='nav-cnt'>
+      <div className='nav-logo-cnt'>
         <Logo />
         <p>GIPHY</p>
       </div>

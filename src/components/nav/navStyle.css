@@ -1,0 +1,10 @@
+.nav-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo-cnt {
+  display: flex;
+  gap: 8px;
+}
