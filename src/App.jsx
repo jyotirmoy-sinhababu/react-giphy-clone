@@ -2,6 +2,7 @@ import './App.css';
 
 import axios from 'axios';
 import { useEffect } from 'react';
+import LandingPage from './pages/landingPage/LandingPage';
 
 function App() {
   useEffect(() => {
@@ -14,7 +15,11 @@ function App() {
       });
   });
 
-  return <></>;
+  return (
+    <>
+      <LandingPage />
+    </>
+  );
 }
 
 export default App;

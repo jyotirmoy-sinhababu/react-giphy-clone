@@ -1,9 +1,13 @@
 import React from 'react';
 
-import { SiGiphy } from 'react-icons/si';
+import Logo from '../logo/Logo';
 
 const Nav = () => {
-  return <div>Nav</div>;
+  return (
+    <div>
+      <Logo />
+    </div>
+  );
 };
 
 export default Nav;
