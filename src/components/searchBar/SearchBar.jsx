@@ -1,24 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { apiContext } from '../../dataProvider/DataProvider';
 
-import { LiaSearchSolid } from 'react-icons/li';
+import { VscSearch } from 'react-icons/vsc';
+
 import Logo from '../logo/Logo';
 
 const SearchBar = () => {
+  const { scrollActive, setScrollActive } = useContext(apiContext);
+
+  const controlScroll = () => {
+    setScrollActive(true);
+  };
+
   return (
-    <>
-      {' '}
-      <form>
-        <input
-          className='search-bar'
-          type='text'
-          placeholder='search all the stickers and gifs'
-        />
-        <button>
-          <LiaSearchSolid />
-        </button>
-      </form>
-      <div>
-        <Logo />
+    <div onScroll={controlScroll}>
+      {!scrollActive ? (
         <form>
           <input
             className='search-bar'
@@ -26,11 +22,25 @@ const SearchBar = () => {
             placeholder='search all the stickers and gifs'
           />
           <button>
-            <LiaSearchSolid />
+            <VscSearch />
           </button>
         </form>
-      </div>
-    </>
+      ) : (
+        <div>
+          <Logo />
+          <form>
+            <input
+              className='search-bar'
+              type='text'
+              placeholder='search all the stickers and gifs'
+            />
+            <button>
+              <VscSearch />
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
   );
 };
 

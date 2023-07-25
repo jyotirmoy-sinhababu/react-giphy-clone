@@ -3,7 +3,7 @@ import { createContext } from 'react';
 
 import axios from 'axios';
 
-export const apiProvider = createContext();
+export const apiContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [scrollActive, setScrollActive] = useState(false);
@@ -18,9 +18,13 @@ const DataProvider = ({ children }) => {
         console.log(res.data.data);
         setTrendingGif(res.data.data);
       });
-  });
+  }, []);
 
-  return <apiProvider.Provider value={{}}>{children}</apiProvider.Provider>;
+  return (
+    <apiContext.Provider value={{ trendingGif, scrollActive, setScrollActive }}>
+      {children}
+    </apiContext.Provider>
+  );
 };
 
 export default DataProvider;
