@@ -4,6 +4,7 @@ import { apiContext } from '../../dataProvider/DataProvider';
 import { VscSearch } from 'react-icons/vsc';
 
 import Logo from '../logo/Logo';
+import './searchBarStyle.css';
 
 const SearchBar = () => {
   const { scrollActive, setScrollActive } = useContext(apiContext);
@@ -15,18 +16,20 @@ const SearchBar = () => {
   return (
     <div onScroll={controlScroll}>
       {!scrollActive ? (
-        <form>
-          <input
-            className='search-bar'
-            type='text'
-            placeholder='search all the stickers and gifs'
-          />
-          <button>
-            <VscSearch />
-          </button>
-        </form>
+        <div className='searchBar-cnt'>
+          <form>
+            <input
+              className='search-bar'
+              type='text'
+              placeholder='search all the stickers and gifs'
+            />
+            <button>
+              <VscSearch />
+            </button>
+          </form>
+        </div>
       ) : (
-        <div>
+        <div className='searchBar-cnt'>
           <Logo />
           <form>
             <input
