@@ -7,10 +7,15 @@ import Logo from '../logo/Logo';
 import './searchBarStyle.css';
 
 const SearchBar = () => {
-  const { scrollActive, setScrollActive } = useContext(apiContext);
+  const { inputSearch, scrollActive, setScrollActive, setInputSearch } =
+    useContext(apiContext);
 
   const controlScroll = () => {
     setScrollActive(true);
+  };
+
+  const handleClick = () => {
+    setInputSearch({ ...inputSearch, [e.target.name]: e.target.value });
   };
 
   return (
@@ -19,11 +24,12 @@ const SearchBar = () => {
         <div className='searchBar-cnt'>
           <form>
             <input
+              name='searchedData'
               className='search-bar'
               type='text'
               placeholder='search all the stickers and gifs'
             />
-            <button>
+            <button onClick={handleClick}>
               <VscSearch />
             </button>
           </form>
@@ -37,7 +43,7 @@ const SearchBar = () => {
               type='text'
               placeholder='search all the stickers and gifs'
             />
-            <button>
+            <button onClick={handleClick}>
               <VscSearch />
             </button>
           </form>
