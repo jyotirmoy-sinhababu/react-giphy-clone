@@ -1,11 +1,15 @@
 import React from 'react';
 
+import './logoStyle.css';
+
 import { SiGiphy } from 'react-icons/si';
 
 const Logo = () => {
   return (
-    <div>
-      <SiGiphy />
+    <div className='logo-cnt'>
+      <p className='logo'>
+        <SiGiphy />
+      </p>
     </div>
   );
 };
