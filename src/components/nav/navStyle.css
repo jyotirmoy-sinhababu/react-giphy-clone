@@ -78,13 +78,13 @@
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 850px) {
   .nav-cnt {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    gap: 18px;
+    gap: 14px;
   }
   .nav-mobile-view {
     display: none;
@@ -121,12 +121,35 @@
   }
   .nav-2ndBtns-cnt {
     display: flex;
-    align-items: center;
+    padding-bottom: 19px;
     gap: 10px;
   }
   .nav-2ndBtn {
-    background-color: transparent;
+    background-color: hsl(249, 75%, 63%);
+    cursor: pointer;
     border: none;
+    color: aliceblue;
+    font-size: 19px;
+    font-weight: 600;
+    width: 100px;
+    height: 45px;
+    border-radius: 7px;
+  }
+  .nav-logInBtns {
+    padding-bottom: 19px;
+  }
+  .nav-logIn-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: 600;
+    width: 140px;
+    height: 45px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgb(238, 207, 166);
     color: aliceblue;
   }
 }

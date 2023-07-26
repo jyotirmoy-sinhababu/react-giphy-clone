@@ -28,11 +28,11 @@ const Nav = () => {
           <button className='nav-btns'>Artists</button>
         </div>
         <div className='nav-2ndBtns-cnt'>
-          <button className='nav'>Upload</button>
-          <button className='nav'>Create</button>
+          <button className='nav-2ndBtn'>Upload</button>
+          <button className='nav-2ndBtn'>Create</button>
         </div>
         <div className='nav-logInBtns'>
-          <button>
+          <button className='nav-logIn-btn'>
             <MdAccountBox />
             Log in
           </button>
