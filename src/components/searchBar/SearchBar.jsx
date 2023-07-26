@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { apiContext } from '../../dataProvider/DataProvider';
 
-import { VscSearch } from 'react-icons/vsc';
+import { LiaSearchSolid } from 'react-icons/lia';
 
 import Logo from '../logo/Logo';
 import './searchBarStyle.css';
@@ -25,6 +25,7 @@ const SearchBar = () => {
       {!scrollActive ? (
         <div className='searchBar-cnt'>
           <form
+            className='search-form'
             onSubmit={(e) => {
               e.preventDefault();
               searchData();
@@ -39,8 +40,8 @@ const SearchBar = () => {
               type='text'
               placeholder='search all the stickers and gifs'
             />
-            <button type='submit'>
-              <VscSearch />
+            <button className='search-btn' type='submit'>
+              <LiaSearchSolid />
             </button>
           </form>
         </div>
@@ -57,7 +58,7 @@ const SearchBar = () => {
               placeholder='search all the stickers and gifs'
             />
             <button>
-              <VscSearch />
+              <LiaSearchSolid />
             </button>
           </form>
         </div>

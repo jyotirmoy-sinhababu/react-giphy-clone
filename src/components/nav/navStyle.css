@@ -100,7 +100,8 @@
     border: none;
     background-color: transparent;
     color: aliceblue;
-    font-size: 19px;
+    height: 45px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     border-bottom: 5px solid rgb(164, 96, 233);
@@ -115,13 +116,12 @@
   }
 
   .nav-logo-cnt {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
     color: aliceblue;
   }
   .nav-2ndBtns-cnt {
     display: flex;
-    padding-bottom: 19px;
     gap: 10px;
   }
   .nav-2ndBtn {
@@ -129,15 +129,13 @@
     cursor: pointer;
     border: none;
     color: aliceblue;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 600;
     width: 100px;
     height: 45px;
     border-radius: 7px;
   }
-  .nav-logInBtns {
-    padding-bottom: 19px;
-  }
+
   .nav-logIn-btn {
     display: flex;
     align-items: center;
