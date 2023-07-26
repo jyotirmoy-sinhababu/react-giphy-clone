@@ -5,7 +5,7 @@
 .nav-mobile-view {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 20px;
   position: relative;
 }
 
@@ -16,7 +16,64 @@
 
 .nav-mobileBtn-cnt {
   position: absolute;
-  top: 90px;
+  top: 75px;
+  right: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 12;
+  width: 320px;
+  height: 520px;
+  background-color: rgb(23, 47, 68);
+  opacity: 1;
+  animation: widthChange 0.3s linear;
+}
+
+.mobileBtn-cnt {
   display: flex;
   flex-direction: column;
+  gap: 35px;
+}
+
+.mobileBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 22px;
+}
+
+.burgerBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 35px;
+}
+
+.mobileBtn-logIn {
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(38, 132, 132);
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  height: 50px;
+}
+.mobileView-logo-cnt {
+  display: flex;
+  font-size: 25px;
+}
+
+/*Animation*/
+@keyframes widthChange {
+  from {
+    width: 20px;
+  }
+  to {
+    width: 320px;
+  }
 }

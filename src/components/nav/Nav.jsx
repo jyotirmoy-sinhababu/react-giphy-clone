@@ -38,12 +38,12 @@ const Nav = () => {
         </div>
       </div>
       <div className='nav-mobile-view'>
-        <div>
+        <div className='mobileView-logo-cnt'>
           <Logo />
-          <p>GIPHY</p>
+          <p>GIPHY CLONE</p>
         </div>
         <div className='burgerBtn-cnt'>
-          <button onClick={handleBurgerBtn}>
+          <button className='burgerBtn' onClick={handleBurgerBtn}>
             <GiHamburgerMenu />
           </button>
         </div>
@@ -51,15 +51,15 @@ const Nav = () => {
         {burgerBtnActive ? (
           <div className='nav-mobileBtn-cnt'>
             <div className='mobileBtn-cnt'>
-              <button>Reactions</button>
-              <button>Entertainment</button>
-              <button>Sports</button>
-              <button>Artists</button>
-              <button>Upload</button>
-              <button>Create</button>
+              <button className='mobileBtn'>Reactions</button>
+              <button className='mobileBtn'>Entertainment</button>
+              <button className='mobileBtn'>Sports</button>
+              <button className='mobileBtn'>Artists</button>
+              <button className='mobileBtn'>Upload</button>
+              <button className='mobileBtn'>Create</button>
             </div>
             <div className='mobile-logInBtn-cnt'>
-              <button>
+              <button className='mobileBtn-logIn'>
                 <MdAccountBox />
                 Log in
               </button>
