@@ -23,12 +23,13 @@ const Nav = () => {
         <div className='nav-btns-cnt'>
           <button className='nav-btns'>Reactions</button>
           <button className='nav-btns'>Entertainment</button>
+          <button className='nav-btns'>Stickers</button>
           <button className='nav-btns'>Sports</button>
           <button className='nav-btns'>Artists</button>
         </div>
-        <div className='nav-2ndBtns'>
-          <button>Upload</button>
-          <button>Create</button>
+        <div className='nav-2ndBtns-cnt'>
+          <button className='nav'>Upload</button>
+          <button className='nav'>Create</button>
         </div>
         <div className='nav-logInBtns'>
           <button>
