@@ -77,3 +77,45 @@
     width: 320px;
   }
 }
+
+@media screen and (min-width: 650px) {
+  .nav-cnt {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 18px;
+  }
+  .nav-mobile-view {
+    display: none;
+  }
+  .nav-logo-cnt {
+    display: flex;
+  }
+  .nav-btns-cnt {
+    display: flex;
+    gap: 12px;
+  }
+  .nav-btns {
+    border: none;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 5px solid rgb(164, 96, 233);
+  }
+
+  .nav-btns:hover {
+    background-image: linear-gradient(
+      to right,
+      hsl(249, 75%, 63%),
+      hsl(331, 83%, 45%)
+    );
+  }
+
+  .nav-logo-cnt {
+    font-size: 30px;
+    font-weight: 900;
+    color: aliceblue;
+  }
+}

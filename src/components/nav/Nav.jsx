@@ -18,19 +18,19 @@ const Nav = () => {
       <div className='nav-cnt'>
         <div className='nav-logo-cnt'>
           <Logo />
-          <p>GIPHY</p>
+          <p className='nav-logo-cnt'>GIPHY CLONE</p>
         </div>
-        <div>
-          <button>Reactions</button>
-          <button>Entertainment</button>
-          <button>Sports</button>
-          <button>Artists</button>
+        <div className='nav-btns-cnt'>
+          <button className='nav-btns'>Reactions</button>
+          <button className='nav-btns'>Entertainment</button>
+          <button className='nav-btns'>Sports</button>
+          <button className='nav-btns'>Artists</button>
         </div>
-        <div>
+        <div className='nav-2ndBtns'>
           <button>Upload</button>
           <button>Create</button>
         </div>
-        <div>
+        <div className='nav-logInBtns'>
           <button>
             <MdAccountBox />
             Log in
