@@ -7,7 +7,7 @@
 
 .trendingCard-cnt {
   display: flex;
-  width: 360px;
+  width: 350px;
   overflow-y: hidden;
 }
 
@@ -23,4 +23,20 @@
   font-size: 25px;
   border: none;
   color: rgb(1, 38, 38);
+}
+
+@media screen and (min-width: 850px) {
+  .trending-cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .trendingBtn-cnt {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
