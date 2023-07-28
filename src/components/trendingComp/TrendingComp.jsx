@@ -4,25 +4,30 @@ import { apiContext } from '../../dataProvider/DataProvider';
 import { BiTrendingUp } from 'react-icons/bi';
 import Card from '../cardComp/Card';
 
+import './trendingStyle.css';
+
 const TrendingComp = () => {
   const { trendingGif } = useContext(apiContext);
   return (
-    <div>
-      <div>
+    <div className='trending-cnt'>
+      <div className='trendingBtn-cnt'>
         {' '}
-        <button>
+        <button className='trendingBtn'>
           <BiTrendingUp /> Trending
         </button>
       </div>
-      {trendingGif
-        ? trendingGif?.map((item) => {
-            return (
-              <div key={item.id}>
-                <Card item={item} />
-              </div>
-            );
-          })
-        : null}
+      <div className='trendingCard-cnt'>
+        {' '}
+        {trendingGif
+          ? trendingGif?.map((item) => {
+              return (
+                <div className='trendingCard' key={item.id}>
+                  <Card item={item} />
+                </div>
+              );
+            })
+          : null}
+      </div>
     </div>
   );
 };
