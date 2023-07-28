@@ -1,31 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Semi+Condensed&family=Be+Vietnam+Pro&family=Bruno+Ace+SC&family=Caprasimo&family=Epilogue&family=Inter&family=Manrope&family=Montserrat+Alternates:wght@200&family=Oooh+Baby&family=Playfair+Display&family=Public+Sans&family=Roboto&family=Rubik&display=swap');
+
 .searchBar-cnt {
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+}
+
+.search-form {
+  display: flex;
+  gap: 7px;
+}
+
+.search-bar {
+  width: 276px;
+  height: 44px;
+  border-radius: 7px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.search-btn {
+  width: 50px;
+  height: 48px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: transparent;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.search-form {
-  display: flex;
-  align-items: center;
-}
+@media screen and (min-width: 850px) {
+  .searchBar-cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
 
-.search-bar {
-  width: 980px;
-  height: 50px;
-  background-color: aliceblue;
-  padding-left: 17px;
-  font-size: 19px;
-}
+  .search-form {
+    display: flex;
+    gap: 4px;
+  }
 
-.search-btn {
-  width: 50px;
-  height: 50px;
-  color: aliceblue;
-  border: none;
-  background-color: transparent;
-  background-image: linear-gradient(
-    to right,
-    hsl(249, 75%, 63%),
-    hsl(331, 83%, 45%)
-  );
+  .search-bar {
+    width: 976px;
+    height: 44px;
+    background-color: aliceblue;
+    border-radius: 7px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+
+  .search-btn {
+    border: none;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+  }
+
+  .search-btn:focus {
+    border: 5px solid rgb(141, 195, 243);
+  }
 }

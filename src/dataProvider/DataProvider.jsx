@@ -22,7 +22,7 @@ const DataProvider = ({ children }) => {
         'http://api.giphy.com/v1/gifs/trending?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62'
       )
       .then((res) => {
-        // console.log(res.data.data);
+        console.log(res.data.data);
         setTrendingGif(res.data.data);
       });
   };
