@@ -3,4 +3,21 @@
   background-color: transparent;
   font-size: 35px;
   position: fixed;
+  top: 185px;
+}
+
+@media screen and (min-width: 850px) {
+  .reactBtn {
+    border: none;
+    background-color: transparent;
+    color: aliceblue;
+    top: 215px;
+    z-index: 12;
+    cursor: pointer;
+  }
+
+  .reactBtn:hover {
+    color: red;
+    font-size: 40px;
+  }
 }
