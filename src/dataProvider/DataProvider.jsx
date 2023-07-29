@@ -8,21 +8,22 @@ export const apiContext = createContext();
 const DataProvider = ({ children }) => {
   const [scrollActive, setScrollActive] = useState(false);
   const [trendingGif, setTrendingGif] = useState();
-  const [categories, setCatagories] = useState();
+  const [artist, setArtist] = useState();
   const [inputData, setInputData] = useState();
 
   useEffect(() => {
     fetchTrendingData();
-    fetchCatagories();
+    fetchArtist();
   }, []);
 
-  const fetchCatagories = () => {
+  const fetchArtist = () => {
     axios
       .get(
-        'https://api.giphy.com/v1/gifs/categories?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62'
+        'https://api.giphy.com/v1/gifs/random?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&tag=artists&rating=g'
       )
       .then((res) => {
-        console.log(res.data.data);
+        console.log(res.data);
+        setArtist(res.data.data);
       });
   };
 
@@ -57,6 +58,7 @@ const DataProvider = ({ children }) => {
         trendingGif,
         scrollActive,
         inputData,
+        artist,
         setScrollActive,
         setInputData,
         searchData,
