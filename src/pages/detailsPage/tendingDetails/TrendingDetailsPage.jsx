@@ -2,19 +2,20 @@ import React, { useContext } from 'react';
 import { apiContext } from '../../../dataProvider/DataProvider';
 
 import { TiArrowBack } from 'react-icons/ti';
+import './trendingDtlsStyle.css';
 
 import Card from '../../../components/cardComp/Card';
 
 const TrendingDetailsPage = () => {
   const { trendingGif } = useContext(apiContext);
   return (
-    <div>
-      <div>
-        <button>
+    <div className='trndDtl-cnt'>
+      <div className='trndDtlBtn-cnt'>
+        <button className='trndDtlBtn'>
           <TiArrowBack />
         </button>
       </div>
-      <div>
+      <div className='trndDtl-card-cnt'>
         {trendingGif ? (
           trendingGif?.map((item) => {
             return (
