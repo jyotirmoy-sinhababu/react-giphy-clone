@@ -7,4 +7,15 @@
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 20px;
+  position: relative;
+}
+
+.trndDtlBtn {
+  position: absolute;
+  top: 142px;
+  border: none;
+  background-color: transparent;
+  font-size: 45px;
+  color: rgb(2, 50, 2);
+  cursor: pointer;
 }
