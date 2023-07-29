@@ -23,6 +23,7 @@
   font-size: 25px;
   border: none;
   color: rgb(1, 38, 38);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 850px) {
@@ -38,5 +39,17 @@
   .trendingBtn-cnt {
     display: flex;
     justify-content: flex-start;
+    width: 1050px;
+  }
+
+  .trendingCard-cnt {
+    display: flex;
+    width: 1050px;
+    overflow-y: hidden;
+  }
+
+  .trendingBtn {
+    color: aliceblue;
+    cursor: pointer;
   }
 }
