@@ -4,15 +4,24 @@ import { apiContext } from '../../dataProvider/DataProvider';
 import { BiTrendingUp } from 'react-icons/bi';
 import Card from '../cardComp/Card';
 
+import { useNavigate } from 'react-router-dom';
+
 import './trendingStyle.css';
 
 const TrendingComp = () => {
   const { trendingGif } = useContext(apiContext);
+
+  const navigate = useNavigate();
+
+  const trendingBtnFunction = () => {
+    navigate('/trendDtls');
+  };
+
   return (
     <div className='trending-cnt'>
       <div className='trendingBtn-cnt'>
         {' '}
-        <button className='trendingBtn'>
+        <button onClick={trendingBtnFunction} className='trendingBtn'>
           <BiTrendingUp /> Trending
         </button>
       </div>
