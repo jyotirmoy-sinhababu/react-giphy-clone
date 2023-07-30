@@ -1,0 +1,51 @@
+.emoji-cnt {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 12px;
+}
+
+.emojiCompCard-cnt {
+  display: flex;
+  width: 350px;
+  overflow-y: hidden;
+}
+
+.emojiBtn {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  background-color: transparent;
+  font-size: 25px;
+  border: none;
+  color: rgb(1, 38, 38);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 850px) {
+  .emoji-cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .emojiBtn-cnt {
+    display: flex;
+    justify-content: flex-start;
+    width: 1050px;
+  }
+
+  .emojiCompCard-cnt {
+    display: flex;
+    width: 1050px;
+    overflow-y: hidden;
+  }
+
+  .emojiBtn {
+    color: aliceblue;
+    cursor: pointer;
+  }
+}

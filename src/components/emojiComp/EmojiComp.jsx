@@ -14,18 +14,18 @@ const EmojiComp = () => {
   const { emoji } = useContext(apiContext);
 
   return (
-    <div>
-      <div>
-        <button>
+    <div className='emoji-cnt'>
+      <div className='emojiBtn-cnt'>
+        <button className='emojiBtn'>
           <BsEmojiSunglasses />
           Emojis
         </button>
       </div>
-      <div>
+      <div className='emojiCompCard-cnt'>
         {emoji ? (
           emoji?.map((item) => {
             return (
-              <div key={item.id}>
+              <div className='emojiCompCard' key={item.id}>
                 <EmojiCard item={item} />
               </div>
             );
