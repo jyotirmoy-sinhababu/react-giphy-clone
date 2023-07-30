@@ -18,7 +18,7 @@ const SearchBar = () => {
     setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 
-  // console.log(inputData);
+  console.log(scrollActive);
 
   return (
     <div onScroll={controlScroll}>
