@@ -10,10 +10,15 @@ const DataProvider = ({ children }) => {
   const [trendingGif, setTrendingGif] = useState();
   const [emoji, setEmoji] = useState();
   const [inputData, setInputData] = useState();
+  const [randomData, setRandomData] = useState();
+
+  // search data cnt
+  const [searchedData, setSearchedData] = useState();
 
   useEffect(() => {
     fetchTrendingData();
     fetchEmoji();
+    fetchRandomData();
   }, []);
 
   const fetchEmoji = () => {
@@ -22,7 +27,6 @@ const DataProvider = ({ children }) => {
         'https://api.giphy.com/v2/emoji?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&limit=10&offset=0'
       )
       .then((res) => {
-        console.log(res.data.data);
         setEmoji(res.data.data);
       });
   };
@@ -48,7 +52,19 @@ const DataProvider = ({ children }) => {
         `https://api.giphy.com/v1/gifs/search?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&q=${inputData.searchedData}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
       )
       .then((res) => {
-        // console.log(res);
+        console.log(res.data.data);
+        setSearchedData(res.data.data);
+      });
+  };
+
+  const fetchRandomData = (allgifs) => {
+    axios
+      .get(
+        `https://api.giphy.com/v1/gifs/search?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&q=${allgifs}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+      )
+      .then((res) => {
+        console.log(res.data.data);
+        setRandomData(res.data.data);
       });
   };
 
@@ -59,6 +75,8 @@ const DataProvider = ({ children }) => {
         scrollActive,
         inputData,
         emoji,
+        searchedData,
+        randomData,
         setScrollActive,
         setInputData,
         searchData,
