@@ -2,6 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { apiContext } from '../../dataProvider/DataProvider';
 
+import './emojiCompStyle.css';
+
 import {
   BsEmojiSunglasses,
   BsFillEmojiExpressionlessFill,

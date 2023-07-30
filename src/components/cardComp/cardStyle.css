@@ -4,9 +4,25 @@
   padding: 10px;
   border-radius: 17px;
 }
+/* emojiCard style */
+
+.emojiImg {
+  width: 280px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 17px;
+}
 
 @media screen and (min-width: 850px) {
   .trending-gifs {
+    width: 210px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 17px;
+  }
+  /* emojiCard style */
+
+  .emojiImg {
     width: 210px;
     height: 150px;
     padding: 10px;
