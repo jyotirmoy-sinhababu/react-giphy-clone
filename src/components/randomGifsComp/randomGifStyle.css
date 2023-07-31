@@ -1,0 +1,42 @@
+.mainRandom-cnt {
+  display: flex;
+  justify-content: center;
+  padding-top: 73px;
+}
+
+.randomGif-cnt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 1050px;
+}
+
+.randomGifImgs {
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 33px;
+  cursor: pointer;
+}
+
+.randomGifImgs:hover {
+  width: 270px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 29px;
+}
+
+@media screen and (min-width: 850px) {
+  .randomGifImgs {
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+  }
+  .randomGifImgs:focus {
+    width: 270px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 29px;
+  }
+}

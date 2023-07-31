@@ -4,6 +4,7 @@
   font-size: 35px;
   position: fixed;
   top: 185px;
+  z-index: 14;
 }
 
 @media screen and (min-width: 850px) {
