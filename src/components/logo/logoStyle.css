@@ -1,0 +1,7 @@
+.logo {
+  font-size: 55px;
+  background-image: url('https://media.giphy.com/media/xT4uQ6HaStH5UX7EBO/giphy.gif');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

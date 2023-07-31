@@ -18,7 +18,7 @@ const Nav = () => {
       <div className='nav-cnt'>
         <div className='nav-logo-cnt'>
           <Logo />
-          <p className='nav-logo-cnt'>GIPHY CLONE</p>
+          <p className='nav-logo-para'>GIPHY CLONE</p>
         </div>
         <div className='nav-btns-cnt'>
           <button className='nav-btns'>Reactions</button>
@@ -41,7 +41,7 @@ const Nav = () => {
       <div className='nav-mobile-view'>
         <div className='mobileView-logo-cnt'>
           <Logo />
-          <p>GIPHY CLONE</p>
+          <p className='nav-logo-para'>GIPHY CLONE</p>
         </div>
         <div className='burgerBtn-cnt'>
           <button className='burgerBtn' onClick={handleBurgerBtn}>

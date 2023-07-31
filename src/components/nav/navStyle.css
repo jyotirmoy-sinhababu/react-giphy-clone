@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Semi+Condensed&family=Be+Vietnam+Pro&family=Bruno+Ace+SC&family=Caprasimo&family=Epilogue&family=Inter&family=Manrope&family=Montserrat+Alternates:wght@200&family=Oooh+Baby&family=Playfair+Display&family=Public+Sans&family=Roboto&family=Rubik&display=swap');
+
 .nav-cnt {
   display: none;
 }
+
+.nav-logo-para {
+  background-image: url('https://media.giphy.com/media/xT4uQ6HaStH5UX7EBO/giphy.gif');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Caprasimo', cursive;
+}
+
 /*mobile design*/
 .nav-mobile-view {
   display: flex;
@@ -66,6 +77,7 @@
 .mobileView-logo-cnt {
   display: flex;
   font-size: 25px;
+  align-items: center;
 }
 
 /*Animation*/
@@ -91,6 +103,7 @@
   }
   .nav-logo-cnt {
     display: flex;
+    align-items: center;
   }
   .nav-btns-cnt {
     display: flex;
