@@ -1,13 +1,20 @@
 .trending-gifs {
-  width: 280px;
-  height: 250px;
+  width: 180px;
+  height: 150px;
   padding: 10px;
   border-radius: 17px;
 }
 /* emojiCard style */
 
 .emojiImg {
-  width: 280px;
+  width: 180px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 17px;
+}
+/* dtls card */
+.dtl-gifs {
+  width: 300px;
   height: 250px;
   padding: 10px;
   border-radius: 17px;
@@ -23,6 +30,13 @@
   /* emojiCard style */
 
   .emojiImg {
+    width: 210px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 17px;
+  }
+
+  .dtl-gifs {
     width: 210px;
     height: 150px;
     padding: 10px;

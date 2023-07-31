@@ -3,7 +3,7 @@
   background-color: transparent;
   font-size: 35px;
   position: fixed;
-  top: 185px;
+  top: 195px;
   z-index: 14;
 }
 
@@ -12,7 +12,7 @@
     border: none;
     background-color: transparent;
     color: aliceblue;
-    top: 215px;
+    top: 245px;
     z-index: 12;
     cursor: pointer;
   }

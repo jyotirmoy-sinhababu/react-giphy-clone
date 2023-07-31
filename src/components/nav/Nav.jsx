@@ -41,7 +41,7 @@ const Nav = () => {
       <div className='nav-mobile-view'>
         <div className='mobileView-logo-cnt'>
           <Logo />
-          <p className='nav-logo-para'>GIPHY CLONE</p>
+          <p className='navMob-logo-para'>GIPHY </p>
         </div>
         <div className='burgerBtn-cnt'>
           <button className='burgerBtn' onClick={handleBurgerBtn}>

@@ -3,7 +3,7 @@ import { apiContext } from '../../../dataProvider/DataProvider';
 
 import './trendingDtlsStyle.css';
 
-import Card from '../../../components/cardComp/Card';
+import DtlsCard from '../../../components/cardComp/DtlsCard';
 import BtnCnt from '../../../utils/btnCnt/BtnCnt';
 
 const TrendingDetailsPage = () => {
@@ -16,7 +16,7 @@ const TrendingDetailsPage = () => {
           trendingGif?.map((item) => {
             return (
               <div key={item.id}>
-                <Card item={item} />
+                <DtlsCard item={item} />
               </div>
             );
           })

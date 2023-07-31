@@ -20,6 +20,15 @@
   position: relative;
 }
 
+.navMob-logo-para {
+  background-image: url('https://media.giphy.com/media/9JxkPTP3alOykb8PmQ/giphy.gif');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Caprasimo', cursive;
+  font-size: 45px;
+}
+
 .burgerBtn-cnt {
   display: flex;
   justify-content: flex-end;
