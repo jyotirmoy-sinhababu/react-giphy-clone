@@ -1,0 +1,11 @@
+.loader-cnt {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.loadingTxt {
+  color: aliceblue;
+}
