@@ -1,0 +1,26 @@
+.searchDtl-cnt {
+  padding: 20px;
+}
+
+.searchDtl-card-cnt {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  position: relative;
+}
+
+@media screen and (min-width: 850px) {
+  .searchDtl-cnt {
+    display: flex;
+    justify-content: center;
+  }
+  .searchDtl-card-cnt {
+    display: flex;
+    width: 1050px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    position: relative;
+  }
+}
