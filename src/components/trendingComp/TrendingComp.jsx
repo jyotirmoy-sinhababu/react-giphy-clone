@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { apiContext } from '../../dataProvider/DataProvider';
 
 import { BiTrendingUp } from 'react-icons/bi';
-import Card from '../cardComp/Card';
+import Card from '../cardComp/Card';  
 
 import { useNavigate } from 'react-router-dom';
 

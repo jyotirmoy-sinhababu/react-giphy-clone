@@ -54,14 +54,16 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
+  background-color: transparent;
 }
 
 .mobileBtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: aliceblue;
   font-size: 22px;
+  color: aliceblue;
+  font-family: 'Caprasimo', cursive;
 }
 
 .burgerBtn {
@@ -72,7 +74,6 @@
 
 .mobileBtn-logIn {
   cursor: pointer;
-  color: aliceblue;
   font-size: 22px;
   display: flex;
   justify-content: center;
