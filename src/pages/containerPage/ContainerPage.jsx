@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { apiContext } from '../../dataProvider/DataProvider';
+
 import { lazy, Suspense } from 'react';
 
 import TrendingComp from '../../components/trendingComp/TrendingComp';
@@ -10,22 +12,25 @@ const RandomGifs = lazy(() =>
 );
 
 const ContainerPage = () => {
+  const { searchedData } = useContext(apiContext);
   return (
-    <div>
-      <TrendingComp />
-      <EmojiComp />
+    <>
       <div>
-        <Suspense
-          fallback={
-            <div>
-              <Loading />
-            </div>
-          }
-        >
-          <RandomGifs />
-        </Suspense>
+        <TrendingComp />
+        <EmojiComp />
+        <div>
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <RandomGifs />
+          </Suspense>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

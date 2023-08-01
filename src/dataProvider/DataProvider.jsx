@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 
 export const apiContext = createContext();
@@ -15,6 +17,8 @@ const DataProvider = ({ children }) => {
 
   // search data cnt
   const [searchedData, setSearchedData] = useState();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchTrendingData();
@@ -57,6 +61,7 @@ const DataProvider = ({ children }) => {
           if (res.data.meta.status == 200) {
             console.log(res.data);
             setSearchedData(res.data.data);
+            navigate('./searchDtls');
           }
           if (res.data.meta.status != 200) {
             setErr(false);

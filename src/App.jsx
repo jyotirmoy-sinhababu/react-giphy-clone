@@ -7,6 +7,7 @@ import DataProvider from './dataProvider/DataProvider';
 import ContainerPage from './pages/containerPage/ContainerPage';
 import TrendingDetailsPage from './pages/detailsPage/tendingDetails/TrendingDetailsPage';
 import EmojiDetailsPage from './pages/detailsPage/emojiDetails/EmojiDetailsPage';
+import SearchDtlPage from './pages/detailsPage/searchDtls/SearchDtlPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<ContainerPage />} />
           <Route path='/trendDtls' element={<TrendingDetailsPage />} />
           <Route path='/emojiDtls' element={<EmojiDetailsPage />} />
+          <Route path='/searchDtls' element={<SearchDtlPage />} />
         </Route>
       </Routes>
     </DataProvider>
