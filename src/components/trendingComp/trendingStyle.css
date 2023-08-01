@@ -11,6 +11,10 @@
   overflow-y: hidden;
 }
 
+.trendingCard-cnt::-webkit-scrollbar {
+  display: none;
+}
+
 .trending-cnt::-webkit-scrollbar {
   overflow: hidden;
 }

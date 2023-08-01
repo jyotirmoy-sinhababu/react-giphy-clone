@@ -11,6 +11,10 @@
   overflow-y: hidden;
 }
 
+.emojiCompCard-cnt::-webkit-scrollbar {
+  display: none;
+}
+
 .emojiBtn {
   display: flex;
   align-items: center;
