@@ -57,6 +57,9 @@
     font-family: 'Playfair Display', serif;
     font-weight: 500;
   }
+  .notOk {
+    border: 6px solid tomato;
+  }
 
   .search-btn {
     border: none;

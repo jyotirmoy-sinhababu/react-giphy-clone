@@ -7,8 +7,14 @@ import Logo from '../logo/Logo';
 import './searchBarStyle.css';
 
 const SearchBar = () => {
-  const { inputData, scrollActive, setScrollActive, setInputData, searchData } =
-    useContext(apiContext);
+  const {
+    inputData,
+    scrollActive,
+    setScrollActive,
+    setInputData,
+    searchData,
+    err,
+  } = useContext(apiContext);
 
   const controlScroll = () => {
     setScrollActive(true);
@@ -34,7 +40,7 @@ const SearchBar = () => {
                 handleChange(e);
               }}
               name='searchedData'
-              className='search-bar'
+              className={`search-bar ${err ? 'notOk' : 'ok'}`}
               type='text'
               placeholder='search all the stickers and gifs'
             />
