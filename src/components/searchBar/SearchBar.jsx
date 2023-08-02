@@ -44,7 +44,7 @@ const SearchBar = () => {
               type='text'
               placeholder='search all the stickers and gifs'
             />
-            <button className='search-btn' type='submit'>
+            <button name='form-button' className='search-btn' type='submit'>
               <LiaSearchSolid />
             </button>
           </form>

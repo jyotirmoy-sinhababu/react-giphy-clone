@@ -69,7 +69,7 @@ const DataProvider = ({ children }) => {
         });
     }
   };
-
+  console.log(inputData);
   const fetchRandomData = (allgifs) => {
     axios
       .get(
