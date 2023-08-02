@@ -3,8 +3,19 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
+  animation: spin 1s linear infinite;
 }
 
 .loadingTxt {
   color: aliceblue;
+  font-size: 45px;
+}
+
+@keyframe spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
