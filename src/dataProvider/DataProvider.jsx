@@ -29,7 +29,7 @@ const DataProvider = ({ children }) => {
   const fetchEmoji = () => {
     axios
       .get(
-        'https://api.giphy.com/v2/emoji?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&limit=10&offset=0'
+        'https://api.giphy.com/v2/emoji?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&limit=35&offset=0'
       )
       .then((res) => {
         setEmoji(res.data.data);
