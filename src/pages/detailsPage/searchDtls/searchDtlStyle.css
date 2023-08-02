@@ -10,6 +10,14 @@
   position: relative;
 }
 
+.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 45px;
+}
+
 @media screen and (min-width: 850px) {
   .searchDtl-cnt {
     display: flex;

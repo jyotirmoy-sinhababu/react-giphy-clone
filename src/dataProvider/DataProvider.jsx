@@ -11,7 +11,7 @@ const DataProvider = ({ children }) => {
   const [scrollActive, setScrollActive] = useState(false);
   const [trendingGif, setTrendingGif] = useState();
   const [emoji, setEmoji] = useState();
-  const [inputData, setInputData] = useState();
+  const [inputData, setInputData] = useState('');
   const [randomData, setRandomData] = useState();
   const [err, setErr] = useState(false);
 
