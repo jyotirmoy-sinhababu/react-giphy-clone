@@ -7,21 +7,11 @@ import Logo from '../logo/Logo';
 import './searchBarStyle.css';
 
 const SearchBar = () => {
-  const {
-    inputData,
-    scrollActive,
-    setScrollActive,
-    setInputData,
-    searchData,
-    err,
-  } = useContext(apiContext);
+  const { scrollActive, setScrollActive, searchData, err, ref } =
+    useContext(apiContext);
 
   const controlScroll = () => {
     setScrollActive(true);
-  };
-
-  const handleChange = (e) => {
-    setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -37,7 +27,7 @@ const SearchBar = () => {
           >
             <input
               onChange={(e) => {
-                handleChange(e);
+                ref.current = e.target.value;
               }}
               name='searchedData'
               className={`search-bar ${err ? 'notOk' : 'ok'}`}
@@ -54,9 +44,10 @@ const SearchBar = () => {
           <Logo />
           <form>
             <input
-              onChange={() => {
-                handleChange();
+              onChange={(e) => {
+                ref.current = e.target.value;
               }}
+              value={ref.current}
               className='search-bar'
               type='text'
               placeholder='search all the stickers and gifs'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { createContext } from 'react';
 
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ const DataProvider = ({ children }) => {
   const [scrollActive, setScrollActive] = useState(false);
   const [trendingGif, setTrendingGif] = useState();
   const [emoji, setEmoji] = useState();
-  const [inputData, setInputData] = useState('');
+  // const [inputData, setInputData] = useState('');
   const [randomData, setRandomData] = useState();
   const [err, setErr] = useState(false);
 
@@ -25,6 +25,9 @@ const DataProvider = ({ children }) => {
     fetchEmoji();
     fetchRandomData();
   }, []);
+  // console.log(inputData.searchedData);
+  ////////////////////////////////
+  const ref = useRef();
 
   const fetchEmoji = () => {
     axios
@@ -50,12 +53,11 @@ const DataProvider = ({ children }) => {
   };
 
   //searchData function
-
   const searchData = () => {
-    if (inputData) {
+    if (ref.current) {
       axios
         .get(
-          `https://api.giphy.com/v1/gifs/search?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&q=${inputData.searchedData}&limit=55&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+          `https://api.giphy.com/v1/gifs/search?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&q=${ref.current}&limit=55&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
         )
         .then((res) => {
           if (res.data.meta.status == 200) {
@@ -69,7 +71,6 @@ const DataProvider = ({ children }) => {
         });
     }
   };
-  console.log(inputData);
   const fetchRandomData = (allgifs) => {
     axios
       .get(
@@ -85,13 +86,14 @@ const DataProvider = ({ children }) => {
       value={{
         trendingGif,
         scrollActive,
-        inputData,
+        // inputData,
         emoji,
         searchedData,
         randomData,
         err,
+        ref,
         setScrollActive,
-        setInputData,
+        // setInputData,
         searchData,
       }}
     >
