@@ -120,6 +120,7 @@ const DataProvider = ({ children }) => {
         randomData,
         err,
         ref,
+        navData,
         setScrollActive,
         searchData,
         fetchNavData,
