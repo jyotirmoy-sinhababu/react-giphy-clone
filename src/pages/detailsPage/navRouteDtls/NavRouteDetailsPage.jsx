@@ -1,29 +1,25 @@
 import React, { useContext } from 'react';
 import { apiContext } from '../../../dataProvider/DataProvider';
 
-import { BsFillEmojiExpressionlessFill } from 'react-icons/bs';
-
 import DtlsCard from '../../../components/cardComp/DtlsCard';
 
-const NavDtls = () => {
+const NavRouteDetailsPage = () => {
   const { navData } = useContext(apiContext);
   return (
-    <div>
+    <div className='searchDtl-cnt'>
       {navData ? (
-        navData?.map((item) => {
+        navData.map((item) => {
           return (
-            <div key={item.key}>
+            <div className='searchDtl-card-cnt' key={item.id}>
               <DtlsCard item={item} />
             </div>
           );
         })
       ) : (
-        <div>
-          <BsFillEmojiExpressionlessFill /> No data
-        </div>
+        <div></div>
       )}
     </div>
   );
 };
 
-export default NavDtls;
+export default NavRouteDetailsPage;

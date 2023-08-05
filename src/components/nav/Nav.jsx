@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { apiContext } from '../../dataProvider/DataProvider';
 
+import { useNavigate } from 'react-router-dom';
+
 import './navStyle.css';
 
 import Logo from '../logo/Logo';
@@ -10,6 +12,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Nav = () => {
   const { fetchNavData } = useContext(apiContext);
   const [burgerBtnActive, setBurgerBtnActive] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleBurgerBtn = () => {
     !burgerBtnActive ? setBurgerBtnActive(true) : setBurgerBtnActive(false);
@@ -26,6 +30,7 @@ const Nav = () => {
           <button
             onClick={(reactions) => {
               fetchNavData(reactions);
+              navigate('./navRoute');
             }}
             className='nav-btns'
           >
@@ -34,6 +39,7 @@ const Nav = () => {
           <button
             onClick={(entertainment) => {
               fetchNavData(entertainment);
+              navigate('./navRoute');
             }}
             className='nav-btns'
           >
@@ -42,6 +48,7 @@ const Nav = () => {
           <button
             onClick={(stickers) => {
               fetchNavData(stickers);
+              navigate('./navRoute');
             }}
             className='nav-btns'
           >
@@ -50,6 +57,7 @@ const Nav = () => {
           <button
             onClick={(sports) => {
               fetchNavData(sports);
+              navigate('./navRoute');
             }}
             className='nav-btns'
           >
@@ -58,6 +66,7 @@ const Nav = () => {
           <button
             onClick={(artists) => {
               fetchNavData(artists);
+              navigate('./navRoute');
             }}
             className='nav-btns'
           >

@@ -102,8 +102,14 @@ const DataProvider = ({ children }) => {
           `https://api.giphy.com/v1/gifs/search?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62&q=${abc}&limit=65&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
         )
         .then((res) => {
-          setNavData(res.data.data);
-          console.log(res.data.data);
+          if (res.data.data != navData) {
+            setNavData(res.data.data);
+          } else if (res.data.data == navData) {
+            setNavData(navData);
+          } else {
+            setNavData(res.data.data);
+          }
+          console.log(res.data);
         });
     } catch (err) {
       console.error(err);
