@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 import Loading from '../../utils/loadingComp/Loading';
 
 const LandingPage = () => {
-  const { emoji, trendingGif } = useContext(apiContext);
+  const { emoji, trendingGif, setScrollActive } = useContext(apiContext);
   return (
     <div>
       <div>

@@ -7,15 +7,10 @@ import Logo from '../logo/Logo';
 import './searchBarStyle.css';
 
 const SearchBar = () => {
-  const { scrollActive, setScrollActive, searchData, err, ref } =
-    useContext(apiContext);
-
-  const controlScroll = () => {
-    setScrollActive(true);
-  };
+  const { scrollActive, searchData, err, ref } = useContext(apiContext);
 
   return (
-    <div onScroll={controlScroll}>
+    <div>
       {!scrollActive ? (
         <div className='searchBar-cnt'>
           <form

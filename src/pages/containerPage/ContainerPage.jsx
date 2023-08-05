@@ -12,9 +12,18 @@ const RandomGifs = lazy(() =>
 );
 
 const ContainerPage = () => {
-  const { searchedData } = useContext(apiContext);
+  const { setScrollActive, scrollActive } = useContext(apiContext);
+
+  const handleScroll = () => {
+    if (scrollActive) {
+      setScrollActive(false);
+    }
+    if (!scrollActive) {
+      setScrollActive(true);
+    }
+  };
   return (
-    <>
+    <div onScroll={handleScroll}>
       <div>
         <TrendingComp />
         <EmojiComp />
@@ -30,7 +39,7 @@ const ContainerPage = () => {
           </Suspense>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

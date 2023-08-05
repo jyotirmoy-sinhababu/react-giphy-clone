@@ -11,7 +11,6 @@ const DataProvider = ({ children }) => {
   const [scrollActive, setScrollActive] = useState(false);
   const [trendingGif, setTrendingGif] = useState();
   const [emoji, setEmoji] = useState();
-  // const [inputData, setInputData] = useState('');
   const [randomData, setRandomData] = useState();
   const [err, setErr] = useState(false);
 
@@ -25,7 +24,6 @@ const DataProvider = ({ children }) => {
     fetchEmoji();
     fetchRandomData();
   }, []);
-  // console.log(inputData.searchedData);
   ////////////////////////////////
   const ref = useRef();
 
@@ -47,7 +45,6 @@ const DataProvider = ({ children }) => {
         'http://api.giphy.com/v1/gifs/trending?api_key=G078G7a8mc4ttRrNNvRqHCSAlv00mr62'
       )
       .then((res) => {
-        // console.log(res.data.data);
         setTrendingGif(res.data.data);
       });
   };
@@ -86,14 +83,12 @@ const DataProvider = ({ children }) => {
       value={{
         trendingGif,
         scrollActive,
-        // inputData,
         emoji,
         searchedData,
         randomData,
         err,
         ref,
         setScrollActive,
-        // setInputData,
         searchData,
       }}
     >
