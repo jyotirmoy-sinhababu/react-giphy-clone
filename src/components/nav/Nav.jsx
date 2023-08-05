@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { apiContext } from '../../dataProvider/DataProvider';
 
 import './navStyle.css';
 
@@ -7,6 +8,7 @@ import { MdAccountBox } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Nav = () => {
+  const { fetchNavData } = useContext(apiContext);
   const [burgerBtnActive, setBurgerBtnActive] = useState(false);
 
   const handleBurgerBtn = () => {
@@ -21,11 +23,46 @@ const Nav = () => {
           <p className='nav-logo-para'>GIPHY CLONE</p>
         </div>
         <div className='nav-btns-cnt'>
-          <button className='nav-btns'>Reactions</button>
-          <button className='nav-btns'>Entertainment</button>
-          <button className='nav-btns'>Stickers</button>
-          <button className='nav-btns'>Sports</button>
-          <button className='nav-btns'>Artists</button>
+          <button
+            onClick={(reactions) => {
+              fetchNavData(reactions);
+            }}
+            className='nav-btns'
+          >
+            Reactions
+          </button>
+          <button
+            onClick={(entertainment) => {
+              fetchNavData(entertainment);
+            }}
+            className='nav-btns'
+          >
+            Entertainment
+          </button>
+          <button
+            onClick={(stickers) => {
+              fetchNavData(stickers);
+            }}
+            className='nav-btns'
+          >
+            Stickers
+          </button>
+          <button
+            onClick={(sports) => {
+              fetchNavData(sports);
+            }}
+            className='nav-btns'
+          >
+            Sports
+          </button>
+          <button
+            onClick={(artists) => {
+              fetchNavData(artists);
+            }}
+            className='nav-btns'
+          >
+            Artists
+          </button>
         </div>
         <div className='nav-2ndBtns-cnt'>
           <button className='nav-2ndBtn'>Upload</button>
